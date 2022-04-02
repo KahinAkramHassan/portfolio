@@ -3,17 +3,18 @@ import dash_bootstrap_components as dbc
 
 dropdown_items = [
     dbc.DropdownMenuItem("Dash Plotly", header=True),
-    dbc.DropdownMenuItem("Simple dash template", href="/dash-template"),
-    dbc.DropdownMenuItem("Portfolio", href="/portfolio"),
+    dbc.DropdownMenuItem("Dash template", href="/dash-template"),
+    dbc.DropdownMenuItem("This portfolio", href="/portfolio"),
     dbc.DropdownMenuItem("D3.js", header=True),
-    dbc.DropdownMenuItem("Project 1", href="/d3-projects"),
+    dbc.DropdownMenuItem("Radial", href="/d3-projects"),
     dbc.DropdownMenuItem("Python", header=True),
     dbc.DropdownMenuItem("Project 1", href="/python"),
 ]
 
 links = dbc.Row(
     [
-        dbc.Col(dbc.NavLink("Cv", href="/", active="exact")),
+        dbc.Col(dbc.NavLink("Cv", href="/cv", active="exact")),
+        dbc.Col(dbc.NavLink("Research", href="/research", active="exact")),
         dbc.Col(
             dbc.DropdownMenu(
             label="Projects",
@@ -23,6 +24,7 @@ links = dbc.Row(
             in_navbar=True,
             ),
         ),
+        dbc.Col(dbc.NavLink("Books", href="/books", active="exact")),
         dbc.Col(dbc.NavLink("Contact", href="/contact", active="exact")),
     ],
     className="navbar-nav ",

@@ -1,31 +1,19 @@
+from turtle import width
 from dash import html, Input, Output, callback
 import dash_bootstrap_components as dbc 
 
-layout = dbc.Container([
-    html.Div(children=[
-        dbc.Row([
-            
-            #Image
-            dbc.Col([
-                dbc.CardImg(src="/static/img/kahin.jpg", top=True, className="rounded-circle center", style={"width": "20rem"})
-            ],xs=12,sm=12, md=5, align="center"),
-            
-            #Bio
-            dbc.Col([
-                dbc.CardBody(children=[
-                    html.H1("Kahin Akram, Ph.D.", className="display-4 font-weight-bold"),
-                    html.Hr(),
-                    html.P("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt", className="lead"),
-                    html.P("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt", className="lead"),
-                    html.P("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt", className="lead"),
-                    html.Hr()
-                ])
-            ],xs=12,sm=12,md=7)
-        ],justify="evenly"),
-    ]),
- 
-],
-fluid=False,
-className="shadow-sm p-3 mb-3 bg-white rounded",
-                     
+layout = dbc.Col(
+    html.Div(
+        [
+            html.H2("Change the background", className="display-3"),
+            html.Hr(className="my-2"),
+            html.P(
+                "Swap the background-color utility and add a `.text-*` color "
+                "utility to mix up the look."
+            ),
+            dbc.Button("Example Button", color="light", outline=True),
+        ],
+        className="h-100 p-5 text-white bg-dark rounded-3",
+    ),
+    md=12,
 )
